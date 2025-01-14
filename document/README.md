@@ -60,7 +60,7 @@
 
 #### 4.1.4 [Enumerate Applications on Webserver](4-Web_Application_Security_Testing/01-Information_Gathering/04-Enumerate_Applications_on_Webserver.md)
 
-#### 4.1.5 [Review Webpage Content for Information Leakage](4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage.md)
+#### 4.1.5 [Review Web Page Content for Information Leakage](4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Web_Page_Content_for_Information_Leakage.md)
 
 #### 4.1.6 [Identify Application Entry Points](4-Web_Application_Security_Testing/01-Information_Gathering/06-Identify_Application_Entry_Points.md)
 
@@ -98,6 +98,8 @@
 
 #### 4.2.12 [Test for Content Security Policy](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy.md)
 
+#### 4.2.13 [Test for Path Confusion](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/13-Test_for_Path_Confusion.md)
+
 ### 4.3 [Identity Management Testing](4-Web_Application_Security_Testing/03-Identity_Management_Testing/README.md)
 
 #### 4.3.1 [Test Role Definitions](4-Web_Application_Security_Testing/03-Identity_Management_Testing/01-Test_Role_Definitions.md)
@@ -124,13 +126,15 @@
 
 #### 4.4.6 [Testing for Browser Cache Weaknesses](4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses.md)
 
-#### 4.4.7 [Testing for Weak Password Policy](4-Web_Application_Security_Testing/04-Authentication_Testing/07-Testing_for_Weak_Password_Policy.md)
+#### 4.4.7 [Testing for Weak Authentication Methods](4-Web_Application_Security_Testing/04-Authentication_Testing/07-Testing_for_Weak_Authentication_Methods.md)
 
 #### 4.4.8 [Testing for Weak Security Question Answer](4-Web_Application_Security_Testing/04-Authentication_Testing/08-Testing_for_Weak_Security_Question_Answer.md)
 
 #### 4.4.9 [Testing for Weak Password Change or Reset Functionalities](4-Web_Application_Security_Testing/04-Authentication_Testing/09-Testing_for_Weak_Password_Change_or_Reset_Functionalities.md)
 
 #### 4.4.10 [Testing for Weaker Authentication in Alternative Channel](4-Web_Application_Security_Testing/04-Authentication_Testing/10-Testing_for_Weaker_Authentication_in_Alternative_Channel.md)
+
+#### 4.4.11 [Testing Multi-Factor Authentication](4-Web_Application_Security_Testing/04-Authentication_Testing/11-Testing_Multi-Factor_Authentication.md)
 
 ### 4.5 [Authorization Testing](4-Web_Application_Security_Testing/05-Authorization_Testing/README.md)
 
@@ -141,6 +145,12 @@
 #### 4.5.3 [Testing for Privilege Escalation](4-Web_Application_Security_Testing/05-Authorization_Testing/03-Testing_for_Privilege_Escalation.md)
 
 #### 4.5.4 [Testing for Insecure Direct Object References](4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Insecure_Direct_Object_References.md)
+
+#### 4.5.5 [Testing for OAuth Weaknesses](4-Web_Application_Security_Testing/05-Authorization_Testing/05-Testing_for_OAuth_Weaknesses.md)
+
+##### 4.5.5.1 [Testing for OAuth Authorization Server Weaknesses](4-Web_Application_Security_Testing/05-Authorization_Testing/05.1-Testing_for_OAuth_Authorization_Server_Weaknesses.md)
+
+##### 4.5.5.2 [Testing for OAuth Client Weaknesses](4-Web_Application_Security_Testing/05-Authorization_Testing/05.2-Testing_for_OAuth_Client_Weaknesses.md)
 
 ### 4.6 [Session Management Testing](4-Web_Application_Security_Testing/06-Session_Management_Testing/README.md)
 
@@ -163,6 +173,8 @@
 #### 4.6.9 [Testing for Session Hijacking](4-Web_Application_Security_Testing/06-Session_Management_Testing/09-Testing_for_Session_Hijacking.md)
 
 #### 4.6.10 [Testing JSON Web Tokens](4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens.md)
+
+#### 4.6.11 [Testing for Concurrent Sessions](4-Web_Application_Security_Testing/06-Session_Management_Testing/11-Testing_for_Concurrent_Sessions.md)
 
 ### 4.7 [Input Validation Testing](4-Web_Application_Security_Testing/07-Input_Validation_Testing/README.md)
 
@@ -262,6 +274,8 @@
 
 #### 4.10.9 [Test Upload of Malicious Files](4-Web_Application_Security_Testing/10-Business_Logic_Testing/09-Test_Upload_of_Malicious_Files.md)
 
+#### 4.10.10 [Test Payment Functionality](4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality.md)
+
 ### 4.11 [Client-side Testing](4-Web_Application_Security_Testing/11-Client-side_Testing/README.md)
 
 #### 4.11.1 [Testing for DOM-Based Cross Site Scripting](4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting.md)
@@ -292,17 +306,27 @@
 
 #### 4.11.13 [Testing for Cross Site Script Inclusion](4-Web_Application_Security_Testing/11-Client-side_Testing/13-Testing_for_Cross_Site_Script_Inclusion.md)
 
+#### 4.11.14 [Testing for Reverse Tabnabbing](4-Web_Application_Security_Testing/11-Client-side_Testing/14-Testing_for_Reverse_Tabnabbing.md)
+
 ### 4.12 [API Testing](4-Web_Application_Security_Testing/12-API_Testing/README.md)
 
-#### 4.12.1 [Testing GraphQL](4-Web_Application_Security_Testing/12-API_Testing/01-Testing_GraphQL.md)
+#### 4.12.0 [API Testing Overview](4-Web_Application_Security_Testing/12-API_Testing/00-API_Testing_Overview.md)
+
+#### 4.12.1 [API Reconnaissance](4-Web_Application_Security_Testing/12-API_Testing/01-API_Reconnaissance.md)
+
+#### 4.12.99 [Testing GraphQL](4-Web_Application_Security_Testing/12-API_Testing/99-Testing_GraphQL.md)
 
 ## 5. [Reporting](5-Reporting/README.md)
+
+### 5.1 [Reporting Structure](5-Reporting/01-Reporting_Structure.md)
+
+### 5.2 [Naming Schemes](5-Reporting/02-Naming_Schemes.md)
 
 ## Appendix A. [Testing Tools Resource](6-Appendix/A-Testing_Tools_Resource.md)
 
 ## Appendix B. [Suggested Reading](6-Appendix/B-Suggested_Reading.md)
 
-## Appendix C. [Fuzz Vectors](6-Appendix/C-Fuzz_Vectors.md)
+## Appendix C. [Fuzzing](6-Appendix/C-Fuzzing.md)
 
 ## Appendix D. [Encoded Injection](6-Appendix/D-Encoded_Injection.md)
 

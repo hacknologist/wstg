@@ -20,11 +20,11 @@ When viewing a file in a web application, the filename is often shown in the URL
 
 Example URL before alteration:
 
-`http://sensitive/cgi-bin/userData.pl?doc=user1.txt`
+`https://sensitive/cgi-bin/userData.pl?doc=user1.txt`
 
 Example URL modified:
 
-`http://sensitive/cgi-bin/userData.pl?doc=/bin/ls|`
+`https://sensitive/cgi-bin/userData.pl?doc=/bin/ls|`
 
 This will execute the command `/bin/ls`.
 
@@ -32,17 +32,17 @@ Appending a semicolon to the end of a URL for a .PHP page followed by an operati
 
 Example:
 
-`http://sensitive/something.php?dir=%3Bcat%20/etc/passwd`
+`https://sensitive/something.php?dir=%3Bcat%20/etc/passwd`
 
 ### Example
 
-Consider the case of an application that contains a set of documents that you can browse from the Internet. If you fire up a personal proxy (such as ZAP or Burp Suite), you can obtain a POST HTTP like the following (`http://www.example.com/public/doc`):
+Consider the case of an application that contains a set of documents that you can browse from the Internet. If you fire up a personal proxy (such as ZAP or Burp Suite), you can obtain a POST HTTP like the following (`https://www.example.com/public/doc`):
 
 ```txt
 POST /public/doc HTTP/1.1
 Host: www.example.com
 [...]
-Referer: http://127.0.0.1/WebGoat/attack?Screen=20
+Referer: https://127.0.0.1/WebGoat/attack?Screen=20
 Cookie: JSESSIONID=295500AD2AAEEBEDC9DB86E34F24A0A5
 Authorization: Basic T2Vbc1Q9Z3V2Tc3e=
 Content-Type: application/x-www-form-urlencoded
@@ -51,13 +51,13 @@ Content-length: 33
 Doc=Doc1.pdf
 ```
 
-In this post request, we notice how the application retrieves the public documentation. Now we can test if it is possible to add an operating system command to inject in the POST HTTP. Try the following (`http://www.example.com/public/doc`):
+In this post request, we notice how the application retrieves the public documentation. Now we can test if it is possible to add an operating system command to inject in the POST HTTP. Try the following (`https://www.example.com/public/doc`):
 
 ```txt
 POST /public/doc HTTP/1.1
 Host: www.example.com
 [...]
-Referer: http://127.0.0.1/WebGoat/attack?Screen=20
+Referer: https://127.0.0.1/WebGoat/attack?Screen=20
 Cookie: JSESSIONID=295500AD2AAEEBEDC9DB86E34F24A0A5
 Authorization: Basic T2Vbc1Q9Z3V2Tc3e=
 Content-Type: application/x-www-form-urlencoded
@@ -104,16 +104,16 @@ If the application doesn't validate the request, we can obtain the following res
 
 In this case, we have successfully performed an OS injection attack.
 
-## Special Characters for Comand Injection
+## Special Characters for Command Injection
 
 The following special character can be used for command injection such as `|` `;` `&` `$` `>` `<` `'` `!`
 
-- `cmd1|cmd2` : Uses of `|` will make command 2 to be executed weather command 1 execution is successful or not.
-- `cmd1;cmd2` : Uses of `;` will make command 2 to be executed weather command 1 execution is successful or not.
+- `cmd1|cmd2` : Uses of `|` will make command 2 to be executed whether command 1 execution is successful or not.
+- `cmd1;cmd2` : Uses of `;` will make command 2 to be executed whether command 1 execution is successful or not.
 - `cmd1||cmd2` : Command 2 will only be executed if command 1 execution fails.
 - `cmd1&&cmd2` : Command 2 will only be executed if command 1 execution succeeds.
 - `$(cmd)` : For example, `echo $(whoami)` or `$(touch test.sh; echo 'ls' > test.sh)`
-- `cmd` : It's used to execute specific command. For example, `whoami`
+- `cmd` : It's used to execute a specific command. For example, `whoami`
 - `>(cmd)`: `>(ls)`
 - `<(cmd)`: `<(ls)`
 
@@ -171,6 +171,5 @@ The web application and its components should be running under strict permission
 ## References
 
 - [Penetration Testing for Web Applications (Part Two)](https://www.symantec.com/connect/articles/penetration-testing-web-applications-part-two)
-- [OS Commanding](http://projects.webappsec.org/w/page/13246950/OS%20Commanding)
 - [CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)
 - [ENV33-C. Do not call system()](https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=87152177)

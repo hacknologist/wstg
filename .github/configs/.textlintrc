@@ -34,8 +34,10 @@
 				"jQuery",
 				"LinkedIn",
 				"Lodash",
+				"Nmap",
 				"MacBook",
 				"Markdown",
+				"Nginx",
 				"OpenType",
 				"PayPal",
 				"PhpStorm",
@@ -46,6 +48,7 @@
 				"Wasm",
 				"WebAssembly",
 				"WebStorm",
+				"Wikipedia",
 				"WordPress",
 				"YouTube",
 				[
@@ -119,14 +122,18 @@
 				// Words and phrases
 				"ID",
 				"JavaScript",
-				// http://stackoverflow.com/questions/1151338/id-or-id-on-user-interface
+				// https://stackoverflow.com/questions/1151338/id-or-id-on-user-interface
 				[
-					"id['’]?s",
+					"id['’]s",
 					"IDs"
 				],
 				[
 					"backwards compatible",
 					"backward compatible"
+				],
+				[
+					"behaviour(s)?",
+					"behavior$1"
 				],
 				[
 					"build system(s)?",
@@ -161,6 +168,10 @@
 					"their"
 				],
 				[
+					"organisation(s|'s)?",
+					"organization$1"
+				],
+				[
 					"repo\\b",
 					"repository"
 				],
@@ -178,8 +189,8 @@
 					"spread syntax"
 				],
 				[
-					"re-direct",
-					"redirect"
+					"re-direct(ing|ed)?",
+					"redirect$1"
 				],
 				[
 					"black[- ]?list(?:ed|ing)?",
@@ -502,6 +513,10 @@
 					"localized"
 				],
 				[
+					"otehr(s)?",
+					"other$1"
+				],
+				[
 					"pacakge(s)?",
 					"package$1"
 				],
@@ -516,6 +531,10 @@
 				[
 					"renegotiaion(s)?",
 					"renegotiation$1"
+				],
+				[
+					"REST-ful",
+					"RESTful"
 				],
 				[
 					"traget",
@@ -545,6 +564,10 @@
 					"utilising",
 					"utilizing"
 				]
+				[
+					"worldlist(s)?",
+					"wordlist$1"
+				],
 			]
 		}
 	}

@@ -1,11 +1,26 @@
 # Workflows Documentation
 
-## `build-pdf.yml`
+## `build-checklists.yml`
 
-For building PDFs at release.
+For building checklists and Create a PR with changes made in the master.
+
+- Trigger: Push, Only when files inside document directory is changed. Manual (`workflow_dispatch`), GitHub web UI.
+- See: `/.github/xlsx/` in the root of the repository for XLSX build.
+
+## `build-ebooks.yml`
+
+For building PDF and EPUB e-Books at release.
 
 - Trigger: Tag applied to repository. Manual (`workflow_dispatch`), GitHub web UI.
-- See: `/.github/pdf/` in the root of the repository.
+- See: `/.github/pdf/` in the root of the repository for PDF build specific configurations.
+- See: `/.github/epub/` in the root of the repository for EPUB build specific configurations.
+
+## `comment.yml`
+
+Triggered by the completion of other workflows in order to comment lint or other results on PRs.
+The workflows which leverage it should create a `pr_number` text file and `artifact.txt` with the content to be commented, which are attached to their workflow runs as `artifact`.
+
+- Trigger: Other workflows `workflow_run`.
 
 ## `dummy.yml`
 
@@ -33,12 +48,6 @@ Checks Markdown files for spelling style and typo issues.
 
 - Trigger: Pull Requests.
 - Config File: `.textlintrc`
-
-## `refresh-stale`
-
-Comments on issues and PRs that have been inactive for 30 days and reapplies the "help wanted" label.
-
-- Trigger: Schedule, midnight daily.
 
 ## `www_latest_update.yml`
 

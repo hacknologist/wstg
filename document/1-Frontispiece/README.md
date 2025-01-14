@@ -10,7 +10,7 @@ OWASP thanks the many authors, reviewers, and editors for their hard work in bri
 
 ## Copyright and Licensee
 
-Copyright (c) 2020 The OWASP Foundation.
+Copyright (c) 2023 The OWASP Foundation.
 
 This document is released under the [Creative Commons 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/). Please read and understand the license and copyright conditions.
 
@@ -29,9 +29,11 @@ This document is released under the [Creative Commons 4.0 License](https://creat
 - Aaron Williams
 - Alessia Michela Di Campi
 - Elie Saad
+- Felix Sieges
 - Ismael Goncalves
 - Janos Zold
 - Jeremy Bonghwan Choi
+- Jinson Varghese Behanan
 - Joel Espunya
 - Manh Pham Tien
 - Mark Clayton
@@ -59,10 +61,12 @@ This document is released under the [Creative Commons 4.0 License](https://creat
 - Asharaf Ali
 - Elie Saad
 - Eoin Murphy
+- Evan Read (alp1n3-eth)
 - Francisco Bustos
 - frozensolid
 - Hsiang-Chih Hsu
 - Jeremy Bonghwan Choi
+- Jinson Varghese Behanan
 - Lukasz Lubczynski
 - Miguel Arevalo
 - Najam Ul Saqib

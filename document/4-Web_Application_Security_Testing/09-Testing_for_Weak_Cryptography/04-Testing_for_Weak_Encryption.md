@@ -8,7 +8,7 @@
 
 Incorrect uses of encryption algorithms may result in sensitive data exposure, key leakage, broken authentication, insecure session, and spoofing attacks. There are some encryption or hash algorithms known to be weak and are not suggested for use such as MD5 and RC4.
 
-In addition to the right choices of secure encryption or hash algorithms, the right uses of parameters also matter for the security level. For example, ECB (Electronic Code Book) mode is not suggested for use in asymmetric encryption.
+In addition to the right choices of secure encryption or hash algorithms, the right uses of parameters also matter for the security level. For example, ECB (Electronic Code Book) mode generally should not be used.
 
 ## Test Objectives
 
@@ -124,7 +124,7 @@ CWE-330: Use of Insufficiently Random Values
 CWE-347: Improper Verification of Cryptographic Signature
 CWE-354: Improper Validation of Integrity Check Value
 CWE-547: Use of Hard-coded, Security-relevant Constants
-CWE-780 Use of RSA Algorithm without OAEP
+CWE-780: Use of RSA Algorithm without OAEP
 ```
 
 ## References
